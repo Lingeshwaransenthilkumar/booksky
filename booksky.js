@@ -9,6 +9,13 @@ addpopbutton.addEventListener("click",function(){
     popupbox.style.display="block";
 })
 
+//! get out of overlay screen by clcking anywhere in overlay
+popupoverlay.addEventListener("click",()=>{
+    popupoverlay.style.display="none";
+    popupbox.style.display="none";
+})
+
+
 //*selecting cancel button to prevent loading onclick
 cancelbtn=document.getElementById("cancel-book");
 cancelbtn.addEventListener("click",(event)=>{
@@ -18,6 +25,9 @@ cancelbtn.addEventListener("click",(event)=>{
 cancelbtn.addEventListener("click",function(){
     popupoverlay.style.display="none"
     popupbox.style.display="none";
+    booktitleinput.value="";
+    bookauthorinput.value="";
+    bookdescriptioninput.value="";
 })
 
 
@@ -40,6 +50,9 @@ addbtn.addEventListener("click",(event)=>{
     container.append(div)
     popupoverlay.style.display="none";
     popupbox.style.display="none";
+    booktitleinput.value="";
+    bookauthorinput.value="";
+    bookdescriptioninput.value="";
 
 })
 function deletebook(event){
